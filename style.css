@@ -1,0 +1,225 @@
+/* Подключаем внешний шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+body {
+    background-color: #f1f1f1;
+
+    /* Цвет текста */
+    color: #0f141e;
+    font-size: 16px;
+    /* Жирность */
+    font-weight: normal;
+    /* Используем внешний шрифт */
+    font-family: 'Roboto', sans-serif;
+}
+
+.avatar {
+    width: 200px;
+    /* Скругление картинки (значение 50% для круглой формы)*/
+    border-radius: 28px;
+    /* Тень - <сдвиг по x> <сдвиг по y> <размытие> <цвет>*/
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 25);    
+}
+
+a {
+    color: black;
+    /* Удаляем подчеркивание ссылок */
+    text-decoration: none;
+}
+
+/* Изменение при наведении мышкой на ссылку */
+a:hover {
+    text-decoration:underline;
+}
+
+/* Изменение при нажатии мышкой на ссылку */
+a:active {
+    color: blue;
+}
+
+/* Посещенная ссылка */
+a:visited {
+    color: gray;
+}
+
+.info {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+
+/* Будет работь на ширине сайта 700px и меньше */
+@media(max-width: 700px) {
+    .info {
+        text-align: center;
+        display: block;
+    }
+}
+
+.info p{
+    /* Цвет текста */
+    color: #86898f;
+    /* Внешние отступы */
+    margin: 0;
+    /* Стиль наклонного текста */
+    font-style: italic;
+     /* Жирный текст */
+    font-weight: bold;
+}
+
+/* Box model */
+.container {
+    max-width: 80%;
+    /* Контент внутри по центру*/
+    margin: auto;
+    padding-top: 30px;
+}
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 15px 20px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.bg-yellow {
+    background: #fff9dc;
+}
+
+.bg-green {
+    background: #e5ffe7;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+.list {
+    padding: 0 20px;
+}
+
+.list li {
+    color: #86898f;
+    margin-bottom: 5px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table th {
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.table td {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+/* Второй и третий тег td в таблице будет иметь светло серый цвет  */
+.table td:nth-child(2),
+.table td:nth-child(3){
+    color: #86898f;
+}
+
+/* Каждая четная строка в таблице получает особый фонновый цвет */
+.table tr:nth-child(even){
+    background: #dff1e0;
+}
+
+.links-list {
+    /* Убераем точки у элементов списка */
+    list-style: none;
+    padding: 0;
+}
+
+.links-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.form-group label {
+    /* Делаем label(ы) сверху над полями*/
+    display: block;
+    font-size: 14px;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    /* Применяется для изменения алгоритма расчёта ширины и высоты элемента. В размер элемента будет включатся и padding b border не увеличивая размер. */
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: black;
+    padding: 15px 0 10px;
+    /* Убераем выделение инпута при клике*/
+    outline: none;
+    font-family: inherit;
+    /* Устанавливает прозрачный фон */
+    background: transparent;
+
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Дочерние элементы которые находятся внутри на первом уровне вложенности */
+.row > .form-group {
+    /* Поле имя и email занимают по 50% от строки во flex контейнере*/
+    width: 50%;
+}
+
+/* Отступ справа для поля Ваше имя*/
+.row > .form-group:first-child,
+.info > .info-group:first-child {
+    margin-right: 20px;
+}
+
+.btn{
+    color: black;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border: none;
+    font-family: inherit;
+    background-color:silver;
+    cursor: pointer;
+}
+
+.btn:hover{
+    /* Прозрачность при наведении */
+    opacity: 0.8;
+}
+
+.call {
+    background: rgb(211, 115, 115);
+    position: fixed;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    bottom: 20px;
+    right: 20px;
+
+    /* Делаем изображение телефона внутри по центру */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call > img {
+    width: 55%;
+}
